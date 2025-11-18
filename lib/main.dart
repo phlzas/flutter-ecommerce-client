@@ -1,4 +1,6 @@
 import 'package:ecommerce/pages/signup_pages.dart';
+import 'package:ecommerce/providers/cart_provider.dart';
+import 'package:ecommerce/providers/home_provider.dart';
 import 'package:ecommerce/providers/login_provider.dart';
 import 'package:ecommerce/providers/signup_provider.dart';
 import 'package:flutter/material.dart';
@@ -20,6 +22,12 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (context) => SignupProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => HomeProvider() ,
+        ),
+        ChangeNotifierProvider(
+          create: (context) => CartProvider(),
         )
       ],
       child: MaterialApp(

@@ -93,7 +93,12 @@ class SignupPages extends StatelessWidget {
                   SnackBar(
                     content: Text(context.read<SignupProvider>().userModel!.message),
                   ),
+                  
                 );
+                 Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => LoginPage()),
+                  );
               }
             },
             text: "SIGNUP",

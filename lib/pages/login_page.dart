@@ -1,4 +1,5 @@
 import 'package:ecommerce/models/user_model.dart';
+import 'package:ecommerce/pages/home_page.dart';
 import 'package:ecommerce/pages/signup_pages.dart';
 import 'package:ecommerce/providers/login_provider.dart';
 import 'package:ecommerce/utils/my_button.dart';
@@ -66,7 +67,12 @@ class LoginPage extends StatelessWidget {
                 SnackBar(
                   content: Text(context.read<LoginProvider>().userModel!.message),
                 ),
+                
               );
+              Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (_) => HomePage()),
+                  );
               } 
             },
             text: "LOGIN",
